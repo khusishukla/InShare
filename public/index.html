@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Sharing App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="upload-container">
+            <h1>File Sharing</h1>
+            <div class="upload-area" id="dropZone">
+                <img src="https://images.unsplash.com/photo-1606857521015-7f9fcf423740?w=300" alt="Upload illustration" class="upload-icon">
+                <p>Drag & Drop files here or</p>
+                <label for="fileInput" class="upload-btn">Choose File</label>
+                <input type="file" id="fileInput" hidden>
+            </div>
+            <div class="file-info" id="fileInfo" style="display: none;">
+                <h3>Uploaded File</h3>
+                <p id="fileName"></p>
+                <div class="link-container">
+                    <input type="text" id="downloadLink" readonly>
+                    <button onclick="copyLink()" class="copy-btn">Copy Link</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
